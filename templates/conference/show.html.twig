@@ -8,7 +8,7 @@
     {% if comments|length > 0 %}
         <div>There are {{ comments|length }} comments.</div>
         {% for comment in comments %}
-            {% if comment.photofilename %}
+            {% if comment.photofilename and comment.photofilename != 'null'  %}
                 <img src="{{ asset('uploads/photos/' ~ comment.photofilename) }}" />
             {% endif %}
 
@@ -28,4 +28,8 @@
     {% else %}
         <div>No comments have been posted yet for this conference.</div>
     {% endif %}
+
+    <h2>Add your own feedback</h2>
+
+    {{ form(comment_form) }}
 {% endblock %}
