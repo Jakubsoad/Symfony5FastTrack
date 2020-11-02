@@ -8,4 +8,10 @@
 /var/
 /vendor/
 /public/uploads
+/config/
+.idea/
+composer.json
+composer.lock
+symfony.lock
+.gitignore
 ###< symfony/framework-bundle ###
