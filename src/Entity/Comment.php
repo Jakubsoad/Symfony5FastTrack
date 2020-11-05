@@ -18,42 +18,47 @@ class Comment
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private int $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
      */
-    private string $author;
+    private $author;
 
     /**
      * @ORM\Column(type="text")
      * @Assert\NotBlank
      */
-    private string $text;
+    private $text;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
      * @Assert\Email
      */
-    private string $email;
+    private $email;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private DateTime $createdAt;
+    private $createdAt;
 
     /**
      * @ORM\ManyToOne(targetEntity=Conference::class, inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
-    private Conference $conference;
+    private $conference;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private string $photoFilename;
+
+    public function __construct()
+    {
+        $this->createdAt = new DateTime();
+    }
 
     public function __toString()
     {

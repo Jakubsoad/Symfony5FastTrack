@@ -25,7 +25,7 @@ class CommentFormType extends AbstractType
                 'required' => false,
                 'mapped' => false,
                 'constraints' => [
-                    new Image(['maxSize' => '1024'])
+                    new Image(['maxSize' => '9999999999'])
                 ],
             ])
             ->add('submit', SubmitType::class)
