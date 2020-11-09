@@ -13,6 +13,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Workflow\Registry;
 use Twig\Environment;
 
+/**
+ * Class AdminController
+ * @package App\Controller
+ *
+ * @Route("/admin")
+ */
 class AdminController extends AbstractController
 {
     private $twig;
@@ -27,7 +33,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin/comment/review/{id}", name="review_comment")
+     * @Route("/comment/review/{id}", name="review_comment")
      */
     public function reviewComment(Request $request, Comment $comment, Registry $registry): Response
     {
