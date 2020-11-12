@@ -53,7 +53,7 @@ class Comment
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private string $photoFilename;
+    private $photoFilename;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true, options={"default": "submitted"})
