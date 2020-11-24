@@ -14,7 +14,7 @@ function App() {
 
             <Router>
                 <Home path="/" />
-                <Conference path="/conferece/:slug" />
+                <Conference path="/conference/:slug" />
             </Router>
         </div>
     )
